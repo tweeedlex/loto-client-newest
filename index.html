@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лото</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/header.css" />
+    <link rel="stylesheet" href="style/games.css" />
+    <link rel="stylesheet" href="style/loto-room.css" />
+    <link rel="stylesheet" href="style/loto-game-room.css" />
+    <link rel="stylesheet" href="style/popup.css" />
+    <link rel="stylesheet" href="style/admin.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <a href="" class="header__logo">Лото</a>
+        <div class="header__user">
+          <p>Баланс: <span class="header__balance">0р</span></p>
+          <a class="header__name"> Имя </a>
+          <button class="header__exit">Logout</button>
+        </div>
+      </div>
+    </header>
+    <div class="registration opened">
+      <div class="registration__container">
+        <div class="registration__content">
+          <div class="registration__body">
+            <form action="" class="registration-form">
+              <div class="registration-form__header form-header">
+                <div class="form-header__buttons">
+                  <div class="form-header__button registration-button active">
+                    Регистрация
+                  </div>
+                  <div class="form-header__button login-button">Вход</div>
+                </div>
+                <div class="form-header__indicator indicator-form">
+                  <div class="indicator-form__line"></div>
+                </div>
+              </div>
+              <span class="auth-form-error"></span>
+              <div class="registration-form__body form-body">
+                <div class="form-body-registration">
+                  <input
+                    type="text"
+                    placeholder="Ваш email"
+                    class="form-body__input email-input"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Ваш пароль"
+                    class="form-body__input password-input"
+                  />
+                  <button class="form-body__button registration-button">
+                    ЗАРЕГИСТРИРОВАТЬСЯ
+                  </button>
+                </div>
+                <div class="form-body-login hidden">
+                  <input
+                    type="text"
+                    placeholder="Ваш email"
+                    class="form-body__input email-input"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Ваш пароль"
+                    class="form-body__input password-input"
+                  />
+                  <button class="form-body__button login-button">Войти</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main>
+      <div class="main__container">
+        <section class="games">
+          <div class="games__container" id="loto">
+            <a class="game loto-room loto-room-1" room="1">
+              <div class="loto-room__body">
+                <p class="game__title">Лото</p>
+                <p>Онлайн: <span class="game__room-online">0</span></p>
+                <p>Ставка: <span class="game__bet">20</span>p</p>
+                <div class="game__until-start">
+                  <p>До начала:</p>
+                  <span class="game__until-start-timer">00:00</span>
+                </div>
+                <div class="game__until-finish">
+                  <p>До конца:</p>
+                  <span class="game__until-finish-timer">00:00</span>
+                </div>
+                <p class="game__room-bank">
+                  Общий банк: <span class="game__room-bank-sum">0</span>p
+                </p>
+              </div>
+            </a>
+            <a class="game loto-room loto-room-2" room="2">
+              <div class="loto-room__body">
+                <p class="game__title">Лото</p>
+                <p>Онлайн: <span class="game__room-online">0</span></p>
+                <p>Ставка: <span class="game__bet">100</span>p</p>
+                <p class="game__until-start">
+                  До начала: <span class="game__until-start-timer">00:00</span>
+                </p>
+                <div class="game__until-finish">
+                  <p>До конца:</p>
+                  <span class="game__until-finish-timer">00:00</span>
+                </div>
+                <p class="game__room-bank">
+                  Общий банк: <span class="game__room-bank-sum">0</span>p
+                </p>
+              </div>
+            </a>
+            <a class="game loto-room loto-room-3" room="3">
+              <div class="loto-room__body">
+                <p class="game__title">Лото</p>
+                <p>Онлайн: <span class="game__room-online">0</span></p>
+                <p>Ставка: <span class="game__bet">300</span>p</p>
+                <p class="game__until-start">
+                  До начала: <span class="game__until-start-timer">00:00</span>
+                </p>
+                <div class="game__until-finish">
+                  <p>До конца:</p>
+                  <span class="game__until-finish-timer">00:00</span>
+                </div>
+                <p class="game__room-bank">
+                  Общий банк: <span class="game__room-bank-sum">0</span>p
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="libs/eventSource/eventsource-polyfill.js"></script>
+    <script src="js/app.js" type="module"></script>
+  </body>
+</html>
